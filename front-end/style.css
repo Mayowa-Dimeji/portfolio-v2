@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  /* background: content-box radial-gradient(rgb(143, 122, 198), rgb(171, 30, 196)); */
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: linear-gradient(135deg, lavender, teal);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* overflow: auto; */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* background-color: white; */
+}
+header {
+  border: 3px solid blanchedalmond;
+  color: black;
+  max-width: 100%;
+}
+
+header a {
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+header nav {
+  display: grid;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  gap: 1em;
+  /* border: 1px solid red; */
+}
+header nav a:hover {
+  background-color: aliceblue;
+}
+main {
+  display: grid;
+  grid-template-rows: repeat(autofit, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+#my-about {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+  padding: 5px;
+  border-left: 5ps solid red;
+}
+
+#my-about p {
+  flex: 1;
+}
+#my-about img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
+}
+#projects {
+  padding: 1.5rem;
+  /* display: grid;
+  grid-template-columns:1fr 1fr; */
+  
+}
+.project-cards {
+   
+    justify-content: center;
+    gap: 4rem;
+    padding: 4rem;
+    /* margin: 1rem; */
+    display: grid;
+  grid-template-columns:1fr ;
+
+  
+}
+.project-card {
+  border: 5px solid black;
+  padding: 1rem;
+  border-radius: 10%;
+  text-align: center;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  
+}
+#contact {
+  padding: 1.5rem;
+  background-color: grey;
+  border: 5px solid teal;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+/* confirmation message  */
+.confirmation-message {
+  /* by default hides the confirmation message */
+  display: none;
+  text-align: center;
+  padding: 3rem;
+}
+
+/* use the pseudo selector .active to display */
+.confirmation-message:active {
+  display: block;
+}
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  padding: 5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+}
+
+/* SKILLS CARD */
+#skills{
+    padding: 3rem;
+}
+
+.skillcard{
+    border: 5px solid black;
+    padding: 1rem;
+    border-radius: 10%;
+    text-align: center;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.skillcards{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  /* background-color: #222; */
+  border-top: 5px solid #222;
+  
+  color: white;
+  margin-top: 2rem;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+ 
+ 
+ 
+@media (min-width: 1024px){
+    #my_about{
+        /* stack the image and text vertically; */
+        /* display: ; */
+        flex-direction: column;
+        text-align: center;
+    }
+    #my_about img{
+        margin-bottom: 1rem;
+    }
+    header nav {
+        display: flex;
+  /* flex-wrap: wrap; */
+        justify-content: space-around;
+        /* padding: 3rem; */
+    }
+
+    #projects{
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: 25% 25% 25% 25%;
+
+
+    }
+    .project-cards{
+        /* display: flex; */
+        flex: 1;
+
+    }
+}
+ 
+@media (min-width: 768px){
+    header nav {
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    main{
+        padding: 1rem;
+        /* single column layout  */
+        grid-template-columns: 1fr;
+    }
+        .project-cards{
+        grid-template-columns: repeat(5, 3fr) ;
+
+
+    }
+}
